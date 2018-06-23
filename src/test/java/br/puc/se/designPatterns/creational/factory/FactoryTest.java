@@ -18,7 +18,7 @@ class FactoryTest {
 		emitter.on("HTTPOutputLogger", (message) -> messages.add(message));
 		
 		LogFactory factory = new LogFactory();
-		OutputLogger httpLogger = factory.of(LoggerType.HTTP_POST);
+		OutputLogger httpLogger = factory.loggerOf(LoggerType.HTTP_POST);
 		httpLogger.log("1");
 		
 		assertThat(messages.size()).isEqualTo(1);
@@ -33,9 +33,9 @@ class FactoryTest {
 		emitter.on("HTTPOutputLogger", (message) -> httpMessages.add(message));
 		emitter.on("ConsoleOutputLogger", (message) -> consoleMessages.add(message));
 		LogFactory factory = new LogFactory();
-		OutputLogger httpLogger = factory.of(LoggerType.HTTP_POST);
+		OutputLogger httpLogger = factory.loggerOf(LoggerType.HTTP_POST);
 		httpLogger.log("1");
-		OutputLogger console = factory.of(LoggerType.CONSOLE);
+		OutputLogger console = factory.loggerOf(LoggerType.CONSOLE);
 		console.log("10");
 		assertThat(consoleMessages.size()).isEqualTo(1);
 		assertThat(httpMessages.size()).isEqualTo(1);
@@ -48,7 +48,7 @@ class FactoryTest {
 		EventEmitter emitter = EventEmitter.getInstance();
 		emitter.on("JMSOutputLogger", (message) -> messages.add(message));
 		LogFactory factory = new LogFactory();
-		OutputLogger httpLogger = factory.of(LoggerType.JMS);
+		OutputLogger httpLogger = factory.loggerOf(LoggerType.JMS);
 		httpLogger.log("1");
 		httpLogger.log("3");
 		httpLogger.log("4");
