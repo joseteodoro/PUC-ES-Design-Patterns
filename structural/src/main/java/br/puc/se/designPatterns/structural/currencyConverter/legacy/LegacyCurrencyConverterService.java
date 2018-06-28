@@ -4,7 +4,7 @@ public class LegacyCurrencyConverterService {
 	
 	public float convert(float value, String source, String target) {
 		LegacyCurrencyConverter legacyCurrencyConverter = new LegacyCurrencyConverter();
-		PriceProvider priceProvider = new LegacyDatabasePriveProvider();
+		PriceProvider priceProvider = new LegacyDatabasePriceProvider();
 		return legacyCurrencyConverter.convert(priceProvider, value, source, target);
 	}
 
