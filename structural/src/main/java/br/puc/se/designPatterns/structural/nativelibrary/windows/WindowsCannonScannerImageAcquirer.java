@@ -1,8 +1,8 @@
 package br.puc.se.designPatterns.structural.nativelibrary.windows;
 
-import br.puc.se.designPatterns.structural.nativelibrary.ImageData;
-import br.puc.se.designPatterns.structural.nativelibrary.ScannerImageAcquirer;
-import br.puc.se.designPatterns.structural.nativelibrary.drivers.WindowsCannonScannerDriver;
+import br.puc.se.designPatterns.structural.nativelibrary.drivers.ImageData;
+import br.puc.se.designPatterns.structural.nativelibrary.drivers.ScannerImageAcquirer;
+import br.puc.se.designPatterns.structural.nativelibrary.drivers.so.WindowsCannonScannerDriver;
 
 public class WindowsCannonScannerImageAcquirer implements ScannerImageAcquirer {
 

@@ -1,4 +1,4 @@
-package br.puc.se.designPatterns.structural.nativelibrary;
+package br.puc.se.designPatterns.structural.nativelibrary.drivers;
 
 public class ScannerConfig {
 

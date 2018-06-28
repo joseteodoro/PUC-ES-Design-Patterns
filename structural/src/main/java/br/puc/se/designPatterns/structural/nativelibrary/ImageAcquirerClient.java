@@ -1,5 +1,7 @@
 package br.puc.se.designPatterns.structural.nativelibrary;
 
+import br.puc.se.designPatterns.structural.nativelibrary.drivers.ImageData;
+import br.puc.se.designPatterns.structural.nativelibrary.drivers.ScannerImageAcquirer;
 import br.puc.se.designPatterns.structural.nativelibrary.linux.LinuxCannonScannerImageAcquirer;
 import br.puc.se.designPatterns.structural.nativelibrary.linux.LinuxKodakScannerImageAcquirer;
 import br.puc.se.designPatterns.structural.nativelibrary.mac.MacCannonScannerImageAcquirer;

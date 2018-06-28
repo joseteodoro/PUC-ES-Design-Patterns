@@ -1,8 +1,8 @@
 package br.puc.se.designPatterns.structural.nativelibrary.mac;
 
-import br.puc.se.designPatterns.structural.nativelibrary.ImageData;
-import br.puc.se.designPatterns.structural.nativelibrary.ScannerImageAcquirer;
-import br.puc.se.designPatterns.structural.nativelibrary.drivers.MacKodakScannerDriver;
+import br.puc.se.designPatterns.structural.nativelibrary.drivers.ImageData;
+import br.puc.se.designPatterns.structural.nativelibrary.drivers.ScannerImageAcquirer;
+import br.puc.se.designPatterns.structural.nativelibrary.drivers.so.MacKodakScannerDriver;
 
 public class MacKodakScannerImageAcquirer implements ScannerImageAcquirer {
 

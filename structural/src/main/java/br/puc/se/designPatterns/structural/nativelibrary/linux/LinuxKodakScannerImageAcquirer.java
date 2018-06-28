@@ -1,8 +1,8 @@
 package br.puc.se.designPatterns.structural.nativelibrary.linux;
 
-import br.puc.se.designPatterns.structural.nativelibrary.ImageData;
-import br.puc.se.designPatterns.structural.nativelibrary.ScannerImageAcquirer;
-import br.puc.se.designPatterns.structural.nativelibrary.drivers.LinuxKodakScannerDriver;
+import br.puc.se.designPatterns.structural.nativelibrary.drivers.ImageData;
+import br.puc.se.designPatterns.structural.nativelibrary.drivers.ScannerImageAcquirer;
+import br.puc.se.designPatterns.structural.nativelibrary.drivers.so.LinuxKodakScannerDriver;
 
 public class LinuxKodakScannerImageAcquirer implements ScannerImageAcquirer {
 

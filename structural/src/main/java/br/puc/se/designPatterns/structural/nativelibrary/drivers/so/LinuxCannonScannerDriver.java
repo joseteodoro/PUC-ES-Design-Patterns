@@ -1,8 +1,8 @@
-package br.puc.se.designPatterns.structural.nativelibrary.drivers;
+package br.puc.se.designPatterns.structural.nativelibrary.drivers.so;
 
-import br.puc.se.designPatterns.structural.nativelibrary.ImageData;
-import br.puc.se.designPatterns.structural.nativelibrary.ScannerConfig;
-import br.puc.se.designPatterns.structural.nativelibrary.ScannerDriver;
+import br.puc.se.designPatterns.structural.nativelibrary.drivers.ImageData;
+import br.puc.se.designPatterns.structural.nativelibrary.drivers.ScannerConfig;
+import br.puc.se.designPatterns.structural.nativelibrary.drivers.ScannerDriver;
 
 public class LinuxCannonScannerDriver implements ScannerDriver {
 
