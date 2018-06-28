@@ -2,6 +2,7 @@ package br.puc.se.designPatterns.structural.nativelibrary.windows;
 
 import br.puc.se.designPatterns.structural.nativelibrary.ImageData;
 import br.puc.se.designPatterns.structural.nativelibrary.ScannerImageAcquirer;
+import br.puc.se.designPatterns.structural.nativelibrary.drivers.WindowsCannonScannerDriver;
 
 public class WindowsCannonScannerImageAcquirer implements ScannerImageAcquirer {
 
@@ -14,8 +15,8 @@ public class WindowsCannonScannerImageAcquirer implements ScannerImageAcquirer {
 	}
 
 	public boolean isScannerPresent() {
-		// TODO Auto-generated method stub
-		return false;
+		return System.getProperty("imageAcquirer.vendor", "").equals("cannon") &&
+				System.getProperty("imageAcquirer.so", "").equals("windows");
 	}
 
 }

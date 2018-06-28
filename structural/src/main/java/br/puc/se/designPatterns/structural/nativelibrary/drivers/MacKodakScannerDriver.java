@@ -1,23 +1,23 @@
-package br.puc.se.designPatterns.structural.nativelibrary.mac;
+package br.puc.se.designPatterns.structural.nativelibrary.drivers;
 
 import br.puc.se.designPatterns.structural.nativelibrary.ImageData;
+import br.puc.se.designPatterns.structural.nativelibrary.ScannerConfig;
 import br.puc.se.designPatterns.structural.nativelibrary.ScannerDriver;
 
 public class MacKodakScannerDriver implements ScannerDriver {
 
+private ScannerConfig config = new ScannerConfig("mac", "kodak", false, false);
+	
 	public void startScannerDevice() {
-		// TODO Auto-generated method stub
-		
+		config.start();
 	}
 
 	public void showScanDialog() {
-		// TODO Auto-generated method stub
-		
+		config.configure();
 	}
 
 	public ImageData scan() {
-		// TODO Auto-generated method stub
-		return null;
+		return new ImageData(config);
 	}
 
 }

@@ -17,7 +17,7 @@ public interface DatabaseUtils {
 			List<LogEvent> events = getEventsFromEntry(entry);
 			entry.setEvents(events);
 		}
-		return null;
+		return entries;
 	}
 	
 }

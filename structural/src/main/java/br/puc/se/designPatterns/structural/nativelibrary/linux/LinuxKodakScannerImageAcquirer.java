@@ -2,6 +2,7 @@ package br.puc.se.designPatterns.structural.nativelibrary.linux;
 
 import br.puc.se.designPatterns.structural.nativelibrary.ImageData;
 import br.puc.se.designPatterns.structural.nativelibrary.ScannerImageAcquirer;
+import br.puc.se.designPatterns.structural.nativelibrary.drivers.LinuxKodakScannerDriver;
 
 public class LinuxKodakScannerImageAcquirer implements ScannerImageAcquirer {
 
@@ -14,8 +15,8 @@ public class LinuxKodakScannerImageAcquirer implements ScannerImageAcquirer {
 	}
 
 	public boolean isScannerPresent() {
-		// TODO Auto-generated method stub
-		return false;
+		return System.getProperty("imageAcquirer.vendor", "").equals("kodak") &&
+				System.getProperty("imageAcquirer.so", "").equals("linux");
 	}
 
 }

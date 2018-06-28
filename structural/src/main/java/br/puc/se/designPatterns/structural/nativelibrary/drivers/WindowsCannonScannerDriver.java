@@ -1,23 +1,23 @@
-package br.puc.se.designPatterns.structural.nativelibrary.windows;
+package br.puc.se.designPatterns.structural.nativelibrary.drivers;
 
 import br.puc.se.designPatterns.structural.nativelibrary.ImageData;
+import br.puc.se.designPatterns.structural.nativelibrary.ScannerConfig;
 import br.puc.se.designPatterns.structural.nativelibrary.ScannerDriver;
 
 public class WindowsCannonScannerDriver implements ScannerDriver {
 
+private ScannerConfig config = new ScannerConfig("windows", "cannon", false, false);
+	
 	public void startScannerDevice() {
-		// TODO Auto-generated method stub
-		
+		config.start();
 	}
 
 	public void showScanDialog() {
-		// TODO Auto-generated method stub
-		
+		config.configure();
 	}
 
 	public ImageData scan() {
-		// TODO Auto-generated method stub
-		return null;
+		return new ImageData(config);
 	}
 
 }

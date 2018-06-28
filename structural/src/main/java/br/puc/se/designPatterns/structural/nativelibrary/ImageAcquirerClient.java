@@ -19,7 +19,7 @@ public class ImageAcquirerClient {
 	private static int height = 480;
 	
 	public void getImageFromScannerAndSave() {
-		String so = System.getProperty("os.name");
+		String so = System.getProperty("imageAcquirer.so", "linux");
 		ScannerImageAcquirer imageAcquirer = null;
 		if (so.equalsIgnoreCase("linux")) {
 			imageAcquirer = new LinuxKodakScannerImageAcquirer();
@@ -45,27 +45,23 @@ public class ImageAcquirerClient {
 	}
 	
 	private ImageData convertFromTIFFToPNG(ImageData source) {
-		// convert the image from tiff to png encoding
-		return source;
+		return source.convertToPNG();
 	}
 
 	private void saveImageOnDatabase(ImageData scaled, String fileNameToSave) {
-		// save image on the filename path
+		scaled.saveToFile(fileNameToSave);
 	}
 
 	private String getFileNameToSave() {
-		// mock returning a filename to store the image file
-		return null;
+		return "/data/images/1.png";
 	}
 
 	public ImageData toGrayScale(ImageData source) {
-		// convert the image to gray
-		return source;
+		return source.toGrayScale();
 	}
 	
 	public ImageData scaleImage(ImageData source, int width, int height) {
-		// scale the image to fit the size
-		return source;
+		return source.scale(width, height);
 	}
 	
 }
