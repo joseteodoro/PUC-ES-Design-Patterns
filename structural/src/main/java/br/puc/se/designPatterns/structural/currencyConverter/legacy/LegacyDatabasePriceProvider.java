@@ -4,7 +4,7 @@ public class LegacyDatabasePriceProvider implements PriceProvider {
 
 	public float getConvertionFactor(String databasename, String source, String target) {
 		//db connection and query about the conversion factor
-		return 1.2f;
+		return 3.4f;
 	}
 
 }

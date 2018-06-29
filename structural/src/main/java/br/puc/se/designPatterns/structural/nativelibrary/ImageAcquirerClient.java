@@ -20,7 +20,7 @@ public class ImageAcquirerClient {
 	
 	private static int height = 480;
 	
-	public void getImageFromScannerAndSave() {
+	public ImageData getImageFromScannerAndSave() {
 		String so = System.getProperty("imageAcquirer.so", "linux");
 		ScannerImageAcquirer imageAcquirer = null;
 		if (so.equalsIgnoreCase("linux")) {
@@ -43,15 +43,15 @@ public class ImageAcquirerClient {
 		}
 		ImageData source = imageAcquirer.getImagesFromScanner();
 		ImageData scaled = this.scaleImage(this.toGrayScale(this.convertFromTIFFToPNG(source)), width, height);
-		this.saveImageOnDatabase(scaled, this.getFileNameToSave());
+		return this.saveImageOnDatabase(scaled, this.getFileNameToSave());
 	}
 	
 	private ImageData convertFromTIFFToPNG(ImageData source) {
 		return source.convertToPNG();
 	}
 
-	private void saveImageOnDatabase(ImageData scaled, String fileNameToSave) {
-		scaled.saveToFile(fileNameToSave);
+	private ImageData saveImageOnDatabase(ImageData scaled, String fileNameToSave) {
+		return scaled.saveToFile(fileNameToSave);
 	}
 
 	private String getFileNameToSave() {

@@ -12,7 +12,7 @@ public class CurrencyConverterService {
 	private CurrencyOnlinePriceProvider onlineProvider;
 	
 	public CurrencyValue convert(CurrencyValue value, String targetCurrency) {
-		// create a adapter to call the legacy converter using a online price provider	
+		// create an adapter to call the legacy converter using a online price provider	
 
 		LegacyCurrencyConverter legacyCurrencyConverter = new LegacyCurrencyConverter();
 		PriceProvider priceProvider = new LegacyDatabasePriceProvider();

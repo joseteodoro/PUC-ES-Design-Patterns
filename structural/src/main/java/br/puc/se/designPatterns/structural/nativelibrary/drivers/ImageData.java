@@ -23,8 +23,9 @@ public class ImageData {
 		return this;
 	}
 
-	public void saveToFile(String fileNameToSave) {
+	public ImageData saveToFile(String fileNameToSave) {
 		this.fileName = fileNameToSave;
+		return this;
 	}
 
 	public ImageData scale(int width, int height) {
