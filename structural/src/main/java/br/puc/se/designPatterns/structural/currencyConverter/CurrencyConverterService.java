@@ -12,11 +12,15 @@ public class CurrencyConverterService {
 	private CurrencyOnlinePriceProvider onlineProvider;
 	
 	public CurrencyValue convert(CurrencyValue value, String targetCurrency) {
-		// create an adapter to call the legacy converter using a online price provider	
-
+		// create an adapter to call the legacy converter using a online price provider
+		PriceProvider adapter = new PriceProvider() {
+			@Override
+			public float getConvertionFactor(String databasename, String currencyName, String targetCurrency) {
+				return onlineProvider.onlinePrice(currencyName, targetCurrency);
+			}
+		};		
 		LegacyCurrencyConverter legacyCurrencyConverter = new LegacyCurrencyConverter();
-		PriceProvider priceProvider = new LegacyDatabasePriceProvider();
-		float converted = legacyCurrencyConverter.convert(priceProvider, value.getValue(), value.getCurrencyName(), targetCurrency);
+		float converted = legacyCurrencyConverter.convert(adapter, value.getValue(), value.getCurrencyName(), targetCurrency);
 		return new CurrencyValue(converted, targetCurrency);
 	}
 	
