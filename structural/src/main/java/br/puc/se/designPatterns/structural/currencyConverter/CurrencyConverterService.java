@@ -1,7 +1,6 @@
 package br.puc.se.designPatterns.structural.currencyConverter;
 
 import br.puc.se.designPatterns.structural.currencyConverter.legacy.LegacyCurrencyConverter;
-import br.puc.se.designPatterns.structural.currencyConverter.legacy.LegacyDatabasePriceProvider;
 import br.puc.se.designPatterns.structural.currencyConverter.legacy.PriceProvider;
 
 
