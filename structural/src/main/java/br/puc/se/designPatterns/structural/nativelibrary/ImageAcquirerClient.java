@@ -11,37 +11,25 @@ import br.puc.se.designPatterns.structural.nativelibrary.drivers.ScannerImageAcq
 public class ImageAcquirerClient {
 
 	private static int width = 640;
-	
-	private static int height = 480;
-	
-	public ImageData getImageFromScannerAndSave() {
-		ScannerImageAcquirerFactory factory = new ScannerImageAcquirerFactory();
-		
-		ScannerImageAcquirer imageAcquirer = factory.createImageAcquirer();
-		
-		ImageData source = imageAcquirer.getImagesFromScanner();
-		ImageData scaled = this.scaleImage(this.toGrayScale(this.convertFromTIFFToPNG(source)), width, height);
-		return this.saveImageOnDatabase(scaled, this.getFileNameToSave());
-	}
-	
-	private ImageData convertFromTIFFToPNG(ImageData source) {
-		return source.convertToPNG();
-	}
 
-	private ImageData saveImageOnDatabase(ImageData scaled, String fileNameToSave) {
-		return scaled.saveToFile(fileNameToSave);
+	private static int height = 480;
+
+	public ImageData getImageFromScannerAndSave() {
+
+		ScannerImageAcquirerBuilder builder = new ScannerImageAcquirerBuilder();
+		ScannerImageAcquirer imageAcquirer = builder
+				.withScale(width, height)
+				.withGrayScale()
+				.withPNGConvertion()
+				.withPersistence(this.getFileNameToSave())
+				.build();
+
+		return imageAcquirer.getImagesFromScanner();
+
 	}
 
 	private String getFileNameToSave() {
 		return "/data/images/1.png";
 	}
 
-	public ImageData toGrayScale(ImageData source) {
-		return source.toGrayScale();
-	}
-	
-	public ImageData scaleImage(ImageData source, int width, int height) {
-		return source.scale(width, height);
-	}
-	
 }
