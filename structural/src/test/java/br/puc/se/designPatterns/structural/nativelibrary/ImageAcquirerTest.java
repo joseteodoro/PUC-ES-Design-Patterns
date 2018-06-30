@@ -55,10 +55,10 @@ public class ImageAcquirerTest {
 		ImageAcquirerClient imageAcquirerClient = new ImageAcquirerClient();
 		ImageData saved = imageAcquirerClient.getImageFromScannerAndSave();
 		ScannerConfig scannerConfig = saved.getScannerConfig();
-		assertEquals(scannerConfig.getSystem(), so);
-		assertEquals(scannerConfig.getVendor(), vendor);
+		assertEquals(so, scannerConfig.getSystem());
+		assertEquals(vendor, scannerConfig.getVendor());
 		
-		assertEquals(saved.getFileName(), fileName);
+		assertEquals(fileName, saved.getFileName());
 		assertTrue(saved.getScannerConfig().isConfigured());
 		assertTrue(saved.getScannerConfig().isStarted());
 	}
