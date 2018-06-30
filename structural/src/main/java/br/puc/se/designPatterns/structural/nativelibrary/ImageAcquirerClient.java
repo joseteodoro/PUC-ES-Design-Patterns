@@ -6,7 +6,7 @@ import br.puc.se.designPatterns.structural.nativelibrary.drivers.ScannerImageAcq
 // Refactor this to avoid those lot of replicated code
 // Tips: #1 a controller / facade to abstract the image module
 //       [x] #2 a factory to create the right imageAcquirer
-//       #3 a bridge to avoid 6 subclasses of ScannerImageAcquirer and reuse the code from drivers
+//       [x] #3 a bridge to avoid 6 subclasses of ScannerImageAcquirer and reuse the code from drivers
 //       [x] #4 a decorator to adjust the image (sizeScale, grayScale, TiffToPNG)
 public class ImageAcquirerClient {
 
