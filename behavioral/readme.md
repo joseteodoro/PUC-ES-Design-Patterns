@@ -1,3 +1,5 @@
+[quiz](https://goo.gl/forms/y1mH3v59cDR2vEQa2)
+
 [presentation](https://docs.google.com/presentation/d/1IzJxLosZaGtwmvCjbhlL8f_Y0JdNU58mg_MSpBXq6dw/edit?usp=sharing)
 
 # Exercicios
