@@ -1,6 +1,5 @@
 package br.puc.se.designPatterns.behavioral.strategy;
 
-import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -8,21 +7,17 @@ import br.puc.se.designPatterns.behavioral.log.LogLevel;
 import br.puc.se.designPatterns.behavioral.log.LogListener;
 import br.puc.se.designPatterns.behavioral.log.Logger;
 
-public class HttpPostLogger implements Logger {
+public class DefaultLogger implements Logger {
+	
+	private LogOutput output;
+	
+	public DefaultLogger(LogOutput output) {
+		this.output = output;
+	}
 
 	private LogLevel level = LogLevel.INFO;
 	
 	private Set<LogListener> listeners = new HashSet<>();
-	
-	private String uri = "http://localhost:8080";
-	
-	public void setUri(String uri) {
-		this.uri = uri;
-	}
-	
-	public String getUri() {
-		return uri;
-	}
 	
 	@Override
 	public void setLogLevel(LogLevel logLevel) {
@@ -38,11 +33,11 @@ public class HttpPostLogger implements Logger {
 	}
 	
 	private String formatMessage(LogLevel messageLevel, String message) {
-		return String.format("[Logger: %s on %s]:%s:%s: %s", "HttpPostLogger", this.uri, new Date(), messageLevel, message);
+		return output.format(messageLevel, message);
 	}
 
 	private void doLog(String formatedMessage) {
-		// mocking the http post over internet and notify the listeners
+		// mock the log for console and send it to listeners
 		for (LogListener listener : this.listeners) {
 			listener.onLog(formatedMessage);
 		}
@@ -54,4 +49,3 @@ public class HttpPostLogger implements Logger {
 	}
 
 }
-
