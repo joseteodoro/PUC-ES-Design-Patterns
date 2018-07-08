@@ -1,4 +1,4 @@
-#(ENG) Good practices to build libraries and frameworks
+# (ENG) Good practices to build libraries and frameworks
 
 ## About coding
 
@@ -31,7 +31,7 @@
 
 
 
-#(PTbr) Boas práticas para construção de biblitecas e frameworks
+# (PTbr) Boas práticas para construção de biblitecas e frameworks
 
 ## Sobre o código que você escreve
 
