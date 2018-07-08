@@ -14,7 +14,7 @@ public class TemplateMethodTest {
 	public void consoleTest() {
 		LogListener listener = new LogListener();
 
-		ConsoleLogger templateMethodConsoleLogger = new ConsoleLogger();
+		DefaultLogger templateMethodConsoleLogger = new ConsoleLogger();
 		templateMethodConsoleLogger.setLogLevel(LogLevel.ERROR);
 		templateMethodConsoleLogger.addListener(listener);
 
@@ -62,7 +62,7 @@ public class TemplateMethodTest {
 	public void consoleMessageTest() {
 		LogListener listener = new LogListener();
 
-		ConsoleLogger templateMethodConsoleLogger = new ConsoleLogger();
+		DefaultLogger templateMethodConsoleLogger = new ConsoleLogger();
 		templateMethodConsoleLogger.setLogLevel(LogLevel.ERROR);
 		templateMethodConsoleLogger.addListener(listener);
 
