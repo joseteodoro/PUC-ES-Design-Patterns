@@ -23,4 +23,4 @@
 
 ## Revisão geral da disciplina: 
 
-[link para revisão](https://goo.gl/forms/paYb4yoqG1DfQMKR2)
+[quiz](https://goo.gl/forms/paYb4yoqG1DfQMKR2)
