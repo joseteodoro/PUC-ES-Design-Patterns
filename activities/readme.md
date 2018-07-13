@@ -17,6 +17,10 @@
 
 [presentation](https://docs.google.com/presentation/d/1IzJxLosZaGtwmvCjbhlL8f_Y0JdNU58mg_MSpBXq6dw/edit?usp=sharing)
 
+## Frameworks e bibliotecas
+
+[presentation](https://docs.google.com/presentation/d/120pu63gBMjiLqfbhhToKz7HaB6GATKM_zHFO2dRrDK4/edit?usp=sharing)
+
 ## Revisão geral da disciplina: 
 
 [link para revisão](https://goo.gl/forms/paYb4yoqG1DfQMKR2)
