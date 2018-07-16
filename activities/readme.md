@@ -24,3 +24,9 @@
 ## Revisão geral da disciplina: 
 
 [quiz](https://goo.gl/forms/paYb4yoqG1DfQMKR2)
+
+## Feedback de nossas aulas (Opcional)
+
+Formulário para dar um feedback de nossas aulas para que eu possa acertar mais da próxima vez :D
+
+[feedback form](https://goo.gl/forms/SPN37P1EaO8G2XoI3)
